@@ -19,8 +19,8 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Source Code Pro" :size 20 :weight 'normal)
-       doom-variable-pitch-font (font-spec :family "sans" :size 18))
+(setq doom-font (font-spec :family "Source Code Pro" :size 18 :weight 'normal)
+       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -62,6 +62,11 @@
 
 ;; 设置 Swiper Keymap
 (global-set-key "\C-s" 'swiper)
+
+;; 设置 wakatime
+(setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
+(setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
+(global-wakatime-mode)
 
 ; (set-fontset-font t nil "Symbola" nil 'prepend)
 

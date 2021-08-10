@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 (package! wakatime-mode)
+(package! hungry-delete)
+(package! prettier)

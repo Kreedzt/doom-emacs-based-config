@@ -2,7 +2,12 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-
+;; 设置编码
+;; (prefer-coding-system 'utf-8)
+;; (set-default-coding-systems 'utf-8)
+;; (set-terminal-coding-system 'utf-8)
+;; (set-selection-coding-system (if (eq system-type 'windows-nt) 'utf-16-le 'utf-8))
+;; (setq locale-coding-system 'utf-8)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -63,6 +68,13 @@
 ;; 设置 Swiper Keymap
 (global-set-key "\C-s" 'swiper)
 
+;; 设置编码
+;; (set-default-coding-systems 'utf-8)
+;; (set-terminal-coding-system 'utf-8)
+;; (set-selection-coding-system (if (eq system-type 'windows-nt) 'utf-16-le 'utf-8))
+;; (setq locale-coding-system 'utf-8)
+;; (prefer-coding-system 'utf-8)
+
 ;; 设置 wakatime
 (setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
 (setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
@@ -71,13 +83,17 @@
 ;; 全局贪婪删除
 (global-hungry-delete-mode)
 
-;; 设置换行符
-(defun no-junk-please-were-unixish ()
-  (let ((coding-str (symbol-name buffer-file-coding-system)))
-    (when (string-match "-\\(?:dos\\|mac\\)$" coding-str)
-      (set-buffer-file-coding-system 'unix))))
+;; search chinse must add this line
+;; https://emacs-china.org/t/emacs-helm-ag/6764
+(modify-coding-system-alist 'process "rg" '(utf-8 . chinese-gbk-dos))
 
-(add-hook 'find-file-hooks 'no-junk-please-were-unixish)
+;; 设置换行符
+;; (defun no-junk-please-were-unixish ()
+;;   (let ((coding-str (symbol-name buffer-file-coding-system)))
+;;     (when (string-match "-\\(?:dos\\|mac\\)$" coding-str)
+;;       (set-buffer-file-coding-system 'unix))))
+
+;; (add-hook 'find-file-hooks 'no-junk-please-were-unixish)
 
 ; (set-fontset-font t nil "Symbola" nil 'prepend)
 

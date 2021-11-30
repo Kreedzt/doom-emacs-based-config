@@ -83,17 +83,10 @@
 (global-set-key "\C-s" 'swiper)
 
 ;; 设置 wakatime
-(setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
-(setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
-(global-wakatime-mode)
+;;(setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
+;;(setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
+;;(global-wakatime-mode)
 
 ;; 全局贪婪删除
 (global-hungry-delete-mode)
 
-;; 设置换行符
-(defun no-junk-please-were-unixish ()
-  (let ((coding-str (symbol-name buffer-file-coding-system)))
-    (when (string-match "-\\(?:dos\\|mac\\)$" coding-str)
-      (set-buffer-file-coding-system 'unix))))
-
-(add-hook 'find-file-hooks 'no-junk-please-were-unixish)

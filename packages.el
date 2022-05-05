@@ -52,4 +52,3 @@
 (package! wakatime-mode)
 (package! hungry-delete)
 (package! prettier)
-(package! jest)

@@ -76,9 +76,9 @@
 ;; (prefer-coding-system 'utf-8)
 
 ;; 设置 wakatime
-(setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
-(setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
-(global-wakatime-mode)
+;; (setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
+;; (setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
+;; (global-wakatime-mode)
 
 ;; 全局贪婪删除
 (global-hungry-delete-mode)
@@ -159,3 +159,13 @@
       (set-buffer-file-coding-system 'unix))))
 
 (add-hook 'find-file-hooks 'no-junk-please-were-unixish)
+
+
+;; lsp-bridge 设置
+(require 'yasnippet)
+(yas-global-mode 1)
+
+(require 'lsp-bridge)
+(global-lsp-bridge-mode)
+
+(setq company-backends '((company-capf :with company-lsp-bridge)))

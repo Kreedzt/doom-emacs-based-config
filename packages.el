@@ -52,3 +52,5 @@
 (package! wakatime-mode)
 (package! hungry-delete)
 (package! prettier)
+
+(add-load-path! "~/lsp-bridge")

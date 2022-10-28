@@ -52,3 +52,8 @@
 (package! wakatime-mode)
 (package! hungry-delete)
 (package! prettier)
+(package! mindre-theme)
+;; (package! org-bullets
+;;  :recipe (:host github :repo "sabof/org-bullets"))
+;; (package! org-modern
+;;  :recipe (:host github :repo "minad/org-modern"))

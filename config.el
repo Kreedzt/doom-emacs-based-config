@@ -53,20 +53,35 @@
 ;;
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
+; This will open documentation for it, including demos of how they are used.
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("org-cn". "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+;; (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+;;                          ("org-cn". "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+;;                          ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+
+;; (setq package-archives '(("gnu"   . "https://elpa.gnu.org/packages/")
+;;                          ("org-cn". "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+;;                          ("melpa" . "https://melpa.org/packages/")))
+
+;; (setq package-archives
+;;       '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
+;;         ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
+;;         ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
+
+;; tencent
+;; (setq package-archives
+;;       '(("melpa-cn" . "http://mirrors.cloud.tencent.com/elpa/melpa/")
+;;         ("org-cn"   . "http://mirrors.cloud.tencent.com/elpa/org/")
+;;         ("gnu-cn"   . "http://mirrors.cloud.tencent.com/elpa/gnu/")))
 
 
 ;;Key Configuration for Doom as Vanilla Emacs
 (setq evil-default-state 'emacs)
 
 ;; 设置 Swiper Keymap
-(global-set-key "\C-s" 'swiper)
+;; (global-set-key "\C-s" 'swiper)
 
 ;; 设置编码
 ;; (set-default-coding-systems 'utf-8)
@@ -76,9 +91,9 @@
 ;; (prefer-coding-system 'utf-8)
 
 ;; 设置 wakatime
-(setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
-(setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
-(global-wakatime-mode)
+;;(setq wakatime-api-key "61055c82-e3d6-46c9-8757-7f9e60019d6b")
+;;(setq wakatime-cli-path "C:\\Python39\\Scripts\\wakatime.exe")
+;;(global-wakatime-mode)
 
 ;; 全局贪婪删除
 (global-hungry-delete-mode)
@@ -115,7 +130,23 @@
 
 
 ;; 设置 Swiper Keymap
-(global-set-key "\C-s" 'swiper)
+;; (global-set-key "\C-s" 'swiper)
+;; (ivy-mode 1)
+(global-set-key (kbd "C-s") 'swiper-isearch)
+(global-set-key (kbd "C-r") 'swiper-isearch-backward)
+;; (global-set-key (kbd "M-x") 'counsel-M-x)
+;; (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+;; (global-set-key (kbd "M-y") 'counsel-yank-pop)
+;; (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+;; (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+;; (global-set-key (kbd "<f1> l") 'counsel-find-library)
+;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+;; (global-set-key (kbd "<f2> j") 'counsel-set-variable)
+;; (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
+;; (global-set-key (kbd "C-c v") 'ivy-push-view)
+;; (global-set-key (kbd "C-c V") 'ivy-pop-view)
+(setq ivy-count-format "(%d/%d) ")
 
 ;; 设置 utf-8
 ;; (set-language-environment "UTF-8")
@@ -159,3 +190,18 @@
       (set-buffer-file-coding-system 'unix))))
 
 (add-hook 'find-file-hooks 'no-junk-please-were-unixish)
+
+;; mode line
+(load! "~/awesome-tray/awesome-tray.el")
+(require 'awesome-tray)
+(awesome-tray-mode 1)
+
+
+;;修改windows版本的PATH路径。
+(setenv "PATH"
+        (concat
+         "C:/ProgramData/scoop/shims" ";"
+         "c:/Users/zhaoz/scoop/shims" ";"
+         (getenv "PATH")
+         )
+        )

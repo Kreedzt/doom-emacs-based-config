@@ -191,7 +191,6 @@
 
 (add-hook 'find-file-hooks 'no-junk-please-were-unixish)
 
-;; mode line
 (load! "~/awesome-tray/awesome-tray.el")
 (require 'awesome-tray)
 (awesome-tray-mode 1)
@@ -205,3 +204,12 @@
          (getenv "PATH")
          )
         )
+
+;; lsp-bridge 设置
+;; (require 'yasnippet)
+;; (yas-global-mode 1)
+
+;; (require 'lsp-bridge)
+;; (global-lsp-bridge-mode)
+
+;; (setq company-backends '((company-capf :with company-lsp-bridge)))

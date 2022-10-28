@@ -57,3 +57,4 @@
 ;;  :recipe (:host github :repo "sabof/org-bullets"))
 ;; (package! org-modern
 ;;  :recipe (:host github :repo "minad/org-modern"))
+;; (add-load-path! "~/lsp-bridge")

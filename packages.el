@@ -52,9 +52,15 @@
 (package! wakatime-mode)
 (package! hungry-delete)
 (package! prettier)
-(package! mindre-theme)
+;; (package! mindre-theme)
+;; (package! org-modern
+;;   :recipe (:local-repo "~/org-modern"))
 ;; (package! org-bullets
-;;  :recipe (:host github :repo "sabof/org-bullets"))
+;;  :recipe (:host github :repo "~/org-bullets"))
+
+;;(add-load-path! "~/org-modern")
+;;(add-load-path! "~/org-bullets")
+
 ;; (package! org-modern
 ;;  :recipe (:host github :repo "minad/org-modern"))
 ;; (add-load-path! "~/lsp-bridge")

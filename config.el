@@ -130,10 +130,10 @@
 
 
 ;; 设置 Swiper Keymap
-;; (global-set-key "\C-s" 'swiper)
+(global-set-key "\C-s" 'swiper)
 ;; (ivy-mode 1)
-(global-set-key (kbd "C-s") 'swiper-isearch)
-(global-set-key (kbd "C-r") 'swiper-isearch-backward)
+;; (global-set-key (kbd "C-s") 'swiper-isearch)
+;; (global-set-key (kbd "C-r") 'swiper-isearch-backward)
 ;; (global-set-key (kbd "M-x") 'counsel-M-x)
 ;; (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 ;; (global-set-key (kbd "M-y") 'counsel-yank-pop)
@@ -184,16 +184,16 @@
 (global-hungry-delete-mode)
 
 ;; 设置换行符
-(defun no-junk-please-were-unixish ()
-  (let ((coding-str (symbol-name buffer-file-coding-system)))
-    (when (string-match "-\\(?:dos\\|mac\\)$" coding-str)
-      (set-buffer-file-coding-system 'unix))))
+;; (defun no-junk-please-were-unixish ()
+;;   (let ((coding-str (symbol-name buffer-file-coding-system)))
+;;     (when (string-match "-\\(?:dos\\|mac\\)$" coding-str)
+;;       (set-buffer-file-coding-system 'unix))))
 
 (add-hook 'find-file-hooks 'no-junk-please-were-unixish)
 
-(load! "~/awesome-tray/awesome-tray.el")
-(require 'awesome-tray)
-(awesome-tray-mode 1)
+;; (load! "~/awesome-tray/awesome-tray.el")
+;; (require 'awesome-tray)
+;; (awesome-tray-mode 1)
 
 
 ;;修改windows版本的PATH路径。
@@ -213,3 +213,7 @@
 ;; (global-lsp-bridge-mode)
 
 ;; (setq company-backends '((company-capf :with company-lsp-bridge)))
+
+;; org extra
+;;(add-hook 'org-mode-hook #'org-modern-mode)
+;;(add-hook 'org-agenda-finalize-hook #'org-modern-agenda)

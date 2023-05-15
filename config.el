@@ -59,13 +59,14 @@
 
 ;;Key Configuration for Doom as Vanilla Emacs
 (setq evil-default-state 'emacs)
+(global-set-key "\C-s" 'swiper)
 
 ; (set-fontset-font t nil "Symbola" nil 'prepend)
 
 ; (set-face-attribute
 ;  'default nil
 ;  :font (font-spec :name "Monaco" 
-;                   :weight 'normal
+;                   :Weight 'normal
 ;                   :slant 'normal
 ;                   :size 12.5))
 

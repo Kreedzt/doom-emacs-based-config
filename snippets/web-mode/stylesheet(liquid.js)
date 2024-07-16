@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: stylesheet(liquid.js)
+# key: stylesheet
+# --
+{% stylesheet %}
+$1
+{% endstylesheet %}

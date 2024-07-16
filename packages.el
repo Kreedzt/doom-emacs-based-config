@@ -61,3 +61,5 @@
                  :build (:not compile)))
   (package! markdown-mode)
   (package! yasnippet))
+(package! lsp-mode :disable t :ignore t)
+(package! company :disable t :ignore t)

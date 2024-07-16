@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: assign(liquid.js)
+# key: assign
+# --
+{% assign $1 %}

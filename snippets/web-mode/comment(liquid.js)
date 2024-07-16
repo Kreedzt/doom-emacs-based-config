@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: comment(liquid.js)
+# key: comment
+# contributor: Kreedzt <zhaozisong1@live.com>
+# --
+{% comment %}$1{% endcomment %}

@@ -20,7 +20,7 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "Source Code Pro" :size 16)
-      doom-variable-pitch-font (font-spec :family "思源黑体 VF" :size 12))
+      doom-variable-pitch-font (font-spec :family "Source Han Sans VF" :size 12))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -59,7 +59,7 @@
 
 ;;Key Configuration for Doom as Vanilla Emacs
 (setq evil-default-state 'emacs)
-(global-set-key "\C-s" 'swiper)
+(global-set-key "\C-s" 'consult-line)
 (add-to-list 'auto-mode-alist '("\\.liquid\\'" . web-mode))
 
 ; (set-fontset-font t nil "Symbola" nil 'prepend)
@@ -147,3 +147,7 @@
 ;;   :config
 ;;   (setq lsp-bridge-enable-log nil)
 ;;   (global-lsp-bridge-mode))
+
+(use-package! agent-shell
+  :config
+  (add-to-list 'exec-path (expand-file-name "~/.local/share/mise/shims")))

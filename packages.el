@@ -51,6 +51,11 @@
 
 (package! hungry-delete)
 (package! prettier)
+
+;; agent-shell: Emacs shell for LLM agents via ACP protocol
+(package! shell-maker)
+(package! acp)
+(package! agent-shell)
 ;; (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
 ;; (when (package! lsp-bridge
 ;;         :recipe (:host github

@@ -9,6 +9,10 @@
 (setq user-full-name "Kreedzt"
       user-mail-address "zhaozisong1@live.com")
 
+;; macOS GUI Emacs 不继承登录 shell 的 PATH。提前加入 mise shims，让 lsp-mode 在
+;; 启动时就能找到全局安装的 typescript-language-server / tsserver。
+(add-to-list 'exec-path (expand-file-name "~/.local/share/mise/shims"))
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -148,6 +152,4 @@
 ;;   (setq lsp-bridge-enable-log nil)
 ;;   (global-lsp-bridge-mode))
 
-(use-package! agent-shell
-  :config
-  (add-to-list 'exec-path (expand-file-name "~/.local/share/mise/shims")))
+(use-package! agent-shell)
